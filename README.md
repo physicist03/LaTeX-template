@@ -6,5 +6,8 @@
 - Experiment Report (version1) : 실험물리학1, 2에서 레포트 양식으로 사용했습니다.
 - Experiment Report (version2) : 실험물리학3, 4에서 레포트 양식으로 사용했습니다.
 - Lecture Note : 수리물리학2, 열역학, 복소수함수론1 등의 강의 및 정리 노트로 사용했습니다.
+- lecture-color : amsthm 대신 tcolorbox를 통해 정의 정리 등을 설정한 노트입니다.
+- beamer-etk : 프레젠테이션 발표용 beamer 양식입니다.
 
-- Last Update : 2025.06.07.
+
+- Last Update : 2025.08.17.
