@@ -1,0 +1,148 @@
+\documentclass{article}
+
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage[affil-it]{authblk}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{braket}
+\usepackage{cite}
+\usepackage{cancel}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{chemformula}
+\usepackage{physics}
+\usepackage{hyperref}
+
+\newcommand{\vp}{\varphi}
+\newcommand{\ve}{\varepsilon}
+
+\tcbuselibrary{theorems,skins,breakable}
+
+% Theorem
+\newtcbtheorem[number within=section]{theorem}{Theorem}%
+{enhanced, breakable,
+ colback=white!5, colframe=cyan!70!black,
+ fonttitle=\bfseries}{th}
+
+% Definition
+\newtcbtheorem[use counter from=theorem]{definition}{Definition}%
+{enhanced, breakable,
+ colback=white!5, colframe=blue!50!green,
+ fonttitle=\bfseries}{def}
+
+% Example
+\newtcbtheorem[use counter from=theorem]{example}{Example}%
+{enhanced, breakable,
+ colback=white!5, colframe=black!80,
+ fonttitle=\bfseries}{ex}
+
+% Proof
+\newtcolorbox{proof}[1][]{enhanced, breakable,
+  colback=white!5, colframe=gray!80!black,
+  fonttitle=\bfseries, title=Proof, #1}
+
+% Lemma
+\newtcbtheorem[use counter from=theorem]{lemma}{Lemma}%
+{enhanced, breakable,
+ colback=white!5, colframe=purple!75,
+ fonttitle=\bfseries}{lem}
+
+% Problem
+\newtcbtheorem[use counter from=theorem]{problem}{Problem}%
+{enhanced, breakable,
+ colback=white!5, colframe=yellow!55!black,
+ fonttitle=\bfseries}{prob}
+
+% Exercise
+\newtcbtheorem[use counter from=theorem]{exercise}{Exercise}%
+{enhanced, breakable,
+ colback=white!5, colframe=yellow!55!black,
+ fonttitle=\bfseries}{exr}
+
+% Axiom
+\newtcbtheorem[use counter from=theorem]{axiom}{Axiom}%
+{enhanced, breakable,
+ colback=white!5, colframe=red!75!white,
+ fonttitle=\bfseries}{ax}
+
+\counterwithin{equation}{section}
+
+
+\geometry{a4paper,left=2cm,right=2cm,top=2.4cm,bottom=2.4cm}
+
+\linespread{1.3}
+
+\title{\textsf{Write title here}}
+\author[1]{Written by Eun Taek Kang\thanks{email: etkang03@gmail.com}}
+\affil[1]{Department of Physics, Sogang University, Seoul 04107, Korea}
+
+\date{Summer 2025, Sogang University}
+
+\begin{document}
+
+\pagestyle{fancy}
+    %... then configure it.
+    \fancyhf{}
+    % Set the header and footer for Even
+    % pages but omit the zone (L, C or R)
+    \fancyhead[R]{\textsf{Prof.\ Hyun Cheol Lee}}
+    \fancyhead[L]{\textsc{Course Full Name}}
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[L]{\textbf{Sogang University}}
+    \fancyfoot[R]{\textit{Department of Physics}}
+
+\maketitle
+
+\begin{abstract}
+    여기에 적절한 서문을 작성해 주세요. 추가로 필요한 package는 자유롭게 추가해 주세요.
+\end{abstract}
+
+\newpage
+
+\section{여기에 섹션 제목을 입력해 주세요.}
+
+\begin{theorem}{}{}
+Let $D$ be a regular domain in an oriented $n$-dimensional manifold $M$, 
+and let $\omega$ be a smooth $(n-1)$ form of compact support. Then
+\[\int_D d\omega = \int_{\partial D} \omega.\]
+\end{theorem}
+
+\begin{theorem}{피타고라스 정리}{pyth}
+$a^2+b^2=c^2$.
+\end{theorem}
+
+\begin{definition}{정의 예시}{def1}
+집합 $A$의 멱집합은 $A$의 모든 부분집합의 집합이다.
+\end{definition}
+
+\begin{example}{간단한 예}{ex1}
+$A=\{1,2\}$일 때, 멱집합은 $\{\varnothing,\{1\},\{2\},\{1,2\}\}$.
+\end{example}
+
+\begin{proof}
+삼각형의 면적 비교로 쉽게 증명할 수 있다.
+\end{proof}
+
+\begin{lemma}{보조정리}{lem1}
+만약 $a|b$ 그리고 $b|c$이면, $a|c$이다.
+\end{lemma}
+
+\begin{problem}{문제}{prob1}
+$f(x)=x^2$의 도함수를 구하라.
+\end{problem}
+
+\begin{exercise}{연습문제}{exr1}
+다음 극한을 구하시오: $\operatorname{Res}_{x\to 0} \dfrac{\sin x}{x}$.
+\end{exercise}
+
+\begin{axiom}{공리}{ax1}
+임의의 직선 위의 두 점을 지나는 직선이 유일하게 존재한다.
+\end{axiom}
+
+
+\end{document}
