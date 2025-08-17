@@ -46,6 +46,16 @@
   colback=white!5, colframe=gray!80!black,
   fonttitle=\bfseries, title=Proof, #1}
 
+% Solution
+\newtcolorbox{solution}[1][]{enhanced, breakable,
+  colback=white!5, colframe=gray!80!black,
+  fonttitle=\bfseries, title=Solution, #1}
+
+% Remark
+\newtcolorbox{remark}[1][]{enhanced, breakable,
+  colback=white!5, colframe=brown!75,
+  fonttitle=\bfseries, title=Remark, #1}
+
 % Lemma
 \newtcbtheorem[use counter from=theorem]{lemma}{Lemma}%
 {enhanced, breakable,
